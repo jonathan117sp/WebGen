@@ -27,10 +27,19 @@
 			<li><a href="#">CSS3</a></li>
 			<li><a href="#">Django</a></li>
 			<li id="publicar_nav">
-				<a href="#" class="icon-lapiz">Publicar</a>
+				<a href="#" class="icon-lapiz" id="mostrar-form">Publicar</a>
 			</li>
 		</ul>
 	</nav>
+	<form action="" id="formulario" class="formulario">
+		
+		<label for="titulo">Titulo:</label>
+		<input type="text" id="titulo" placeholder="Titulo" required>
+		<label for="url">URL:</label>
+		<input type="url" id="url" placeholder="URL" required>
+		<input type="submit" value="Agregar">
+
+	</form>
 	<aside>
 		<video width="320" height="240" autoplay>
 		
@@ -188,9 +197,24 @@
 	</section>
 	<footer>
 		<p>
-			<strong>Powered by Pony</strong>
+			<strong>Powered by Lizcano</strong>
 		</p>
-		<p>mejorando.la 2013</p>
+		<p>WebGen 2015</p>
 	</footer>
+	<script type="text/Javascript" src="jquery-1.11.3.min.js"></script>
+	<script src="formulario.js"></script>
+	<script>
+
+	window.onload = function  () {
+		console.log("Ya se disparo el evento onload")
+	}
+
+	$(document).on('ready', function(){
+
+		console.log('Ya se disparo el evento DOMContentLoaded');
+
+	});
+
+	</script>
 </body>
 </html>
